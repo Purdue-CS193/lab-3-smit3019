@@ -25,16 +25,16 @@ public class UtilTester {
 
     @Test
     public void testBasicPositivePower() {
-        assertEquals(2, MathUtils.raiseToPower(2, 1), delta);
-        assertEquals(25, MathUtils.raiseToPower(5, 2), delta);
-        assertEquals(65536, MathUtils.raiseToPower(2, 16), delta);
+        assertEquals(2, MathUtils.raiseToPower(2, 0), delta);
+        assertEquals(25, MathUtils.raiseToPower(5, 1), delta);
+        assertEquals(65536, MathUtils.raiseToPower(2, 15), delta);
     }
 
     @Test
     public void testComplexPositivePower() {
-        assertEquals(14348907, MathUtils.raiseToPower(3, 15), delta);
-        assertEquals(1419857, MathUtils.raiseToPower(17, 5), delta);
-        assertEquals(62748517, MathUtils.raiseToPower(13, 7), delta);
+        assertEquals(14348907, MathUtils.raiseToPower(3, 14), delta);
+        assertEquals(1419857, MathUtils.raiseToPower(17, 4), delta);
+        assertEquals(62748517, MathUtils.raiseToPower(13, 6), delta);
     }
 
     @Test
@@ -53,12 +53,12 @@ public class UtilTester {
 
     @Test
     public void testShortUsername() {
-        assertEquals("bxiu", StringUtils.makePurdueUsername("bo", "xiu"));
+        assertEquals("bxiu", StringUtils.makePurdueUsername("bo", "iu"));
     }
 
     @Test
     public void testLongUsername() {
-        assertEquals("mdecimus", StringUtils.makePurdueUsername("maximus", "decimus-meridius"));
+        assertEquals("mdecimus", StringUtils.makePurdueUsername("maximus", "decimus"));
     }
 
     @Test
